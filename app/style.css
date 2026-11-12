@@ -1,0 +1,25 @@
+body { margin: 0; font: 15px/1.4 system-ui, sans-serif; color: #1d1d1f; background: #fafafa; }
+header, main, footer { padding: 12px 24px; }
+h1 { margin: 0; font-size: 22px; }
+.sub { margin: 2px 0 0; color: #666; }
+.list { list-style: none; margin: 0; padding: 0; max-width: 960px; }
+.row { display: grid; grid-template-columns: 90px 50px 1fr 200px auto; gap: 12px; align-items: center; min-height: 44px; padding: 0 12px; border-bottom: 1px solid #e5e5e5; background: #fff; }
+.row .id { font-family: ui-monospace, monospace; }
+.row.sev1 .sev { color: #b00020; font-weight: 600; }
+.row.sev2 .sev { color: #a15c00; }
+.row time { color: #555; font-variant-numeric: tabular-nums; }
+footer { color: #777; font-size: 13px; }
+.loader, .empty { color: #666; }
+.loader::before { content: ''; display: inline-block; width: 12px; height: 12px; margin-right: 8px; border: 2px solid #bbb; border-top-color: #333; border-radius: 50%; vertical-align: -2px; animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.failure { color: #b00020; }
+.row button { font: inherit; padding: 4px 14px; border: 1px solid #999; border-radius: 4px; background: #fff; cursor: pointer; }
+.row button:disabled { opacity: 0.5; cursor: default; }
+.acked { color: #1b7f3b; font-weight: 600; }
+.acked::before { content: '✓ '; }
+.confirm { max-width: 460px; padding: 18px 20px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 8px 28px rgba(0, 0, 0, .18); }
+.confirm::backdrop { background: rgba(0, 0, 0, .25); }
+.confirm-text { margin: 0 0 14px; font-size: 16px; }
+.confirm-actions { display: flex; justify-content: flex-end; gap: 10px; }
+.confirm button { font: inherit; padding: 6px 16px; border: 1px solid #999; border-radius: 4px; background: #fff; cursor: pointer; }
+.confirm button.primary { background: #1d1d1f; border-color: #1d1d1f; color: #fff; font-weight: 600; }
